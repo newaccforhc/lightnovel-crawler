@@ -6,7 +6,7 @@ push_uri="https://$GITHUB_USER:$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO"
 
 git config --global user.email "updater@updater" && git config --global user.name "ForkUpdater"
 
-git clone "https://github.com/$GITHUB_REPO" "$repo_temp"
+git clone "https://$GITHUB_USER:$GITHUB_SECRET_TOKEN@github.com/$GITHUB_REPO" "$repo_temp"
 cd "$repo_temp"
 
 git checkout -b upstream $GITHUB_REPO_BRANCH
