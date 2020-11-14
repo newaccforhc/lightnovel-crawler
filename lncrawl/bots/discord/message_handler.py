@@ -353,7 +353,7 @@ class MessageHandler:
         self.send_sync('\n'.join([
             'Now you choose what to download:',
             '- Send `!cancel` to stop this session.',
-            '- Send `all` to download all chapters',
+            '- Send `all` to download all chapters (uploads will fail if file size becomes larger than 8MB)',
             '- Send `last 20` to download last 20 chapters. Choose any number you want.',
             '- Send `first 10` for first 10 chapters. Choose any number you want.',
             '- Send `volume 2 5` to download download volume 2 and 5. Pass as many numbers you need.',
@@ -451,9 +451,9 @@ class MessageHandler:
             '- Send `!cancel` to stop.',
             # '- Send `!all` to download all formats _(it may take a very very long time!)_',
             'To select specific output formats:',
-            '- Send `pdf` to download only pdf format',
-            '- Send `epub pdf` to download both epub and pdf formats.',
-            '- Send `{space separated format names}` for multiple formats',
+            '- Send `pdf` to download only pdf format (Large number of chapters may exceed the RAM and process will be terminated without any warning. Pls use ePub',
+            '- Send `epub pdf` to download both epub and pdf formats. (This May also exceed the RAM. Pls use ePub)',
+            '- Send `{space separated format names}` for multiple formats (consider using only a single format)',
             'Available formats: `' + '` `'.join(available_formats) + '`',
         ]))
         self.state = self.handle_output_selection
