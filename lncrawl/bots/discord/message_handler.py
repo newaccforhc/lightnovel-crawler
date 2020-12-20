@@ -353,7 +353,7 @@ class MessageHandler:
         self.send_sync('\n'.join([
             'Now you choose what to download:',
             '- Send `!cancel` to stop this session.',
-            '- Send `all` to download all chapters **(uploads will fail if file size becomes larger than `8MB`)**',
+            '- Send `all` to download all chapters',
             '- Send `last 20` to download last 20 chapters. Choose any number you want.',
             '- Send `first 10` for first 10 chapters. Choose any number you want.',
             '- Send `volume 2 5` to download download volume 2 and 5. Pass as many numbers you need.',
